@@ -1,76 +1,37 @@
-# 🌐 Preparação para o Exame AZ-104: Microsoft Azure Administrator
+# Guia: Criando uma Máquina Virtual no Azure
 
-Este repositório documenta minha jornada de estudos para a certificação AZ-104, com foco especial na criação de uma Máquina Virtual (VM) no Microsoft Azure. Inclui anotações, comandos, capturas de tela e links úteis organizados de acordo com os tópicos oficiais do exame.
+Este guia cobre as etapas essenciais para criar uma máquina virtual no Azure via Portal, conforme os tópicos do exame AZ-104.
 
----
+## Etapa 1: Criar Grupo de Recursos
 
-## 🎯 Objetivo
+1. Acesse https://portal.azure.com
+2. Pesquise por “Grupos de Recursos”
+3. Clique em “Criar”
+4. Defina um nome como `rg-az104-lab` e escolha uma região
 
-Demonstrar conhecimento técnico e prático na administração de recursos do Azure — em especial máquinas virtuais — conforme exigido pelo exame AZ-104.
+## Etapa 2: Criar Máquina Virtual
 
----
+1. Vá em “Máquinas Virtuais” > “Criar”
+2. Preencha os dados:
+   - Nome: `vm-az104-lab`
+   - Região: `Brazil South`
+   - Imagem: `Ubuntu 20.04 LTS`
+   - Tamanho: `Standard_B1s`
+   - Autenticação: `Chave pública SSH`
+3. Crie um par de chaves (ou use existente)
+4. Ative IP público
+5. Deixe portas padrão liberadas (SSH)
 
-## 📘 Tópicos do Repositório
+## Etapa 3: Validar Criação
 
-### 1. Criando uma Máquina Virtual no Azure
+1. Acesse a aba “Visão Geral” da VM
+2. Copie o IP público
+3. No terminal:
+   ssh azureuser@<ip-publico>
 
-- Criação de grupo de recursos
-- Escolha de imagem, tamanho e autenticação
-- Conexão via SSH
-- Testes de conectividade
+## Etapa 4: Teste de Conectividade
 
-### 2. Automatização com ARM Template
+1. Dentro da VM:
+   sudo apt update
 
-- Parâmetros de implantação (`parameters.json`)
-- Estrutura sugerida para criação via Azure CLI
-
-### 3. Capturas de tela (📸)
-
-- Portal inicial do Azure
-- Criação de RG e VM
-- Conexão SSH
-
----
-
-## 🛠️ Ferramentas e Recursos
-
-- [Microsoft Learn – AZ-104](https://learn.microsoft.com/pt-br/certifications/exams/az-104/)
-- Azure Portal
-- Azure CLI e PowerShell
-- Visual Studio Code (VS Code)
-
----
-
-## 🧱 Estrutura do Projeto
-
-guia_estudo_az-104/
-├── README.md
-├── create-vm-guide.md
-├── parameters.json
-├── IMAGES_GUIDE.md
-└── images/
-    ├── portal-home.png
-    ├── resource-group.png
-    ├── vm-config.png
-    └── ssh-connection.png
-
----
-
-## 💡 Dicas para Estudo
-
-- Faça os tutoriais práticos do Microsoft Learn
-- Teste via Azure Free Account com sandbox
-- Documente seus passos com markdown e prints
-- Automatize sempre que possível com scripts ou templates
-
----
-
-## ✅ Status
-
-📌 Projeto em andamento. Novas seções serão adicionadas conforme meu avanço nos estudos para a certificação.
-
----
-
-## 📄 Licença
-
-Distribuído sob a licença MIT. Sinta-se à vontade para colaborar!
+   Se funcionar, a VM está com acesso à internet.

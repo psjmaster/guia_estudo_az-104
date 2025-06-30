@@ -2,9 +2,20 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "vmName": { "value": "vm-az104-lab" },
-    "adminUsername": { "value": "azureuser" },
-    "authenticationType": { "value": "sshPublicKey" },
-    "sshPublicKey": { "value": "sua-chave-ssh-aqui" }
+    "vmName": {
+      "value": "vm-az104-lab"
+    },
+    "location": {
+      "value": "Brazil South"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "authenticationType": {
+      "value": "sshPublicKey"
+    },
+    "sshPublicKey": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEFuxt3wJKqUOokHs1eOkijgYQ6W3446Gbifi00ozTZaBlHEhSdhfZ2UdWU6XHL0AyGeoe1cDiu4UaX+kNR5uAXie/Cr30XGycfw8OEp6BEFrDQECeyuw+igaeW86cURNxTY2hVFF8+1oj6Zk98ImOHVd9ayzZoFLE3wU+/WUk7dcp3k4dmydmnNTEgfBLcuxO5oLzLAamFAHrV2X1hHbF+WJzIKiB6l9qKmxJ0uH+jJRpiYT4k9kRP8nLvzfyEMTHHYx2rwMz0GwcxiTYRi3G+FIE+5/klhpuMm/lBbqUsTVACPCTu/dAtHcfXPmWoq3c8HhC1c90DpT/0+1B0NN4NZ3Of5ZVkU7qkHnTgo0zZ06rRnSieLB0UKXdXKvXlb59JHO6cj23yj/DRaS5y/DQMegOrkqdaVw+eNU3ZYCoZkvNjrf1THZ3/+4r7GPAfRbnhxo1zz93umVcsz2aut2GitjSwuhFwP5nkXZWKhQUxvW8wKLL0R37E+VrJYV2iH0FGt/Qw/z0TFlOpFcREbZgTGgPn61PZADnrhOB98v8/G1hI9LzldoCDC/rwfndq5ruj1+7qiFqWeDs8u6fzqPptCKETR6SnINw5EEDe9ZXKBFUsSf8wToPUiSv8dcIyAiAE/BbCdgsWze7qMUg44xNWytqS35tlWyzJcGiupCK/Q== psjmaster@gmail.com"
+    }
   }
 }
